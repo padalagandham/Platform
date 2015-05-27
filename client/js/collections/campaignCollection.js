@@ -1,10 +1,9 @@
-define([ 'backbone', 'models/campaign' ], function( Backbone, CampaignModel ) {
+define([ 'backbone', 'models/campaignModel' ], function( Backbone, CampaignModel ) {
   
   return Backbone.Collection.extend({
 
     model: CampaignModel,
-    url: ''
-
+ 
   });
 
  
