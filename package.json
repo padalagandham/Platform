@@ -1,0 +1,17 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "dependencies": {
+    "amdefine": ">=0.0.4",
+    "eco": "1.1.x",
+    "express": "3.0.x",
+    "react-tools": "^0.13.3",
+    "requirejs-react-jsx": "^0.14.1"
+  },
+  "devDependencies": {
+    "mocha": "1.7.x",
+    "expect.js": "0.2.x",
+    "requirejs": "2.1.x",
+    "jsdom": "0.2.x"
+  }
+}
