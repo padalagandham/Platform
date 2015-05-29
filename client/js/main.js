@@ -1,5 +1,8 @@
 require.config({
   shim: {
+    'jquery':{
+    exports: '$'
+  },
     'zepto': {
       exports: 'Zepto'
     },
@@ -15,15 +18,21 @@ require.config({
     },
     'jsx' : {
       exports :'jsx'
-    }
+    },
+    'bootstrap':{
+    deps: ['jquery'],
+    exports:'bootstrap'
+  },
   },
   paths: {
-      zepto: 'libs/zepto'
+    jquery:'libs/jquery'
+    ,zepto: 'libs/zepto'
     , underscore: 'libs/underscore'
     , backbone: 'libs/backbone'
     , text: 'libs/require/text'
     , react : 'libs/reactJS'
     , jsx : 'libs/JSXTransformer'
+    ,bootstrap :  'libs/bootstrap'
   }
 });
 
