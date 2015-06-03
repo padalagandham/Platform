@@ -5,11 +5,12 @@ define(['react', 'templates/Row','bootstrap'], function( React, Row ,bootstrap) 
 
 	 var Campaign = React.createClass({
 	  render: function () {
-	  	var arr = [];
-	  	this.props.catObj.forEach(function(rowObj){
-	  		var obj = rowObj.toJSON();
-	  		arr.push(<Row cols={obj.className} />);
-	  	});	
+	  	var arr = [];		
+		var camPaignObj = this.props.catObj[0].get("camPaign");
+		camPaignObj.forEach(function(row){
+				console.log("row",row);
+				arr.push(<Row cols={row} />)
+		});
 	    return (
 	     
 	        <div id="main-container">

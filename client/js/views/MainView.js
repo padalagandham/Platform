@@ -6,22 +6,34 @@ define(['backbone', 'templates/Campaign','collections/campaignCollection', 'mode
 	var MainView = Backbone.View.extend({
 		initialize: function () {
 			this.collections = new CampaignCollection();
+			this.collections.add(new campaignModel({
 
-			for(var i=0; i<3; i++){
-				this.collections.add(new campaignModel({
-					media : "slideshow" + i,
-					extra : "empty",
-					className:['col-md-5','col-md-4','col-md-3'],
-					//mediaType:['images/bag-icon.png','fghfg','fghgfhgh']
-
-
-
+					"camPaign": [
+									 { 	
+										"rowObj":[
+													{cols:'5', media: { "url":"images/bag-icon.png","type":"image" } },
+													{cols:'4', media: { "txt":"hello Text","type":"text" } },
+													{cols:'3', media: { "url":"b.png","type":"image" } },
+												 ],
+										
+									},
+									{
+										"rowObj":[
+										
+										
+													{cols:'7', media: { "url":"a.png","type":"image" } },
+													{cols:'2', media: { "txt":"hello Text2222","type":"text" } },
+													{cols:'3', media: { "url":"b.png","type":"image" } },
+										
+												]
+									}
+								
+							]	
 				}))
-			}
     	},
+		
     	render: function () {
-		      //React.render(this.component(), this.el);
-		      //console.log(this.collections);
+
 		      React.render(
 		        React.createElement(Campaign, {"catObj" : this.collections.models}),
 		        this.el

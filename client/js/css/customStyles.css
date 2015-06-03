@@ -1,0 +1,17 @@
+.colorSelect{
+background: black;
+}
+
+.nav>li.active>a {
+background-color: black;
+}
+
+.nav>li.active>a:focus, .nav>li.active>a:hover,.nav>li>a:focus, .nav>li>a:hover{
+  background: white;
+  color: black;
+}
+
+.nav>li>a{
+  color: white;
+}
+

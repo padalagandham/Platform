@@ -5,70 +5,61 @@ define(['react'], function( React ) {
 
 	 var Row = React.createClass({
 	  render: function () {
-	  	var rows = [];
-	  	console.log(this.props.cols);
-	  	this.props.cols.className.forEach(function(colObj){
-	  	console.log(colObj)
-	  				rows.push(
-						<div className={colObj} style={{border:"1px solid red"}}>
-						DummyText
-						<Media media={this.props.cols} />
-						</div>
-					);		
-	  			 	
-	  	}.bind(this));
+	  	var column = [];	  	
+		console.log("cols",this.props.cols);		
+	this.props.cols.rowObj.forEach(function(colObj){
+			console.log("colObj",colObj);
+						if(colObj.media.type == "text") {
+								column.push(
 
-	    return (
-	      
+										 <TextModule txtObj={colObj}  />
+									);
+						}
+						if(colObj.media.type == "image") {
+								column.push(
+
+										 <ImageModule imgObj={colObj} />										
+	
+									);
+						}	
+	}); 
+					
+	    return (	      
 	        <div className="row">       	
-	        	{rows}
-	        </div>
-	      
+				{column}
+	        </div>	      
 	    );
 	  }
 	});
-
-	 // var Media=React.createClass({
-	 // 		render:function(){
-
-
-	 // 			var media=[];
-	 // 			console.log(this.props);
-
-	 // 			this.props.media.mediaType.forEach(function(mediaObj){
-	 // 				console.log(mediaObj)
-	 // 					media.push(
-
-	 // 						);
-	 // 			});
-
-	 // 			return(
-	 // 				<div></div>
-	 // 				);
-	 // 		}
-	 // })
-
-	 // var Columns=React.createClass({
-	 // 	render:function(){
-
-	 // 		 var cols=[];
-	 // 		var columsData=this.props.cols.classname;
-	 // 		columsData.forEach(function(colObj){
-	 // 			//console.log(colObj)
-	 // 			cols.push(
-	 // 			<div className={colObj} style={{border:"1px solid red"}}>fghfgh </div>
-	 // 				);
-	 // 		}); 
-
-	 // 		return(
-	 // 			<div>sdsdf
-	 // 			</div>
-	 				
-	 // 		);
-
-	 // 	}
-
-	 // });
+	
+	var TextModule=React.createClass({
+		render:function(){
+			var txtObj=this.props.txtObj;
+			var classString ="col-md-";
+			classString += txtObj.cols;			
+			return( 
+			<div className={classString} style={{border:"1px solid red"}}>						
+			{txtObj.media.txt}
+			</div>
+			
+			);					
+		}	
+	});
+	
+	
+	var ImageModule=React.createClass({
+		render:function(){		
+			var imgObj=this.props.imgObj;
+			var classString ="col-md-";
+			classString += imgObj.cols;
+			return( 
+				<div className={classString} style={{border:"1px solid red"}}>						
+					<img src={imgObj.media.url} />
+				</div>
+										
+			);
+		}
+	
+	});
 	return Row; 
-
 });	
