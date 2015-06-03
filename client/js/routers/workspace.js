@@ -13,7 +13,7 @@ define([  'zepto', 'backbone', 'views/MainView' ], function( $, Backbone, MainVi
     startCampaign: function(){
       console.log("start startCampaign");
       var mainView = new MainView({
-        el : document.getElementById('content')
+        el : document.getElementById('container')
       });
       mainView.render();
 

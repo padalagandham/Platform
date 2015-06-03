@@ -7,13 +7,13 @@ define(['backbone', 'templates/Campaign','collections/campaignCollection', 'mode
 		initialize: function () {
 			this.collections = new CampaignCollection();
 			this.collections.add(new campaignModel({
-
-					"camPaign": [
+				
+				"camPaign": [
 									 { 	
 										"rowObj":[
-													{cols:'5', media: { "url":"images/bag-icon.png","type":"image" } },
-													{cols:'4', media: { "txt":"hello Text","type":"text" } },
-													{cols:'3', media: { "url":"b.png","type":"image" } },
+													{cols:'9', media: { "url":"images/img1.jpg","type":"image" } },
+													{cols:'3', media: { "url":"images/img2.jpg","type":"image"} },
+													//{cols:'3', media: { "url":"images/img2.jpg","type":"image" } },
 												 ],
 										
 									},
@@ -21,14 +21,22 @@ define(['backbone', 'templates/Campaign','collections/campaignCollection', 'mode
 										"rowObj":[
 										
 										
-													{cols:'7', media: { "url":"a.png","type":"image" } },
-													{cols:'2', media: { "txt":"hello Text2222","type":"text" } },
-													{cols:'3', media: { "url":"b.png","type":"image" } },
+													{cols:'12', media: { "url":"images/img-slider.jpg","type":"image"  } }
+												]
+									},
+								
+									{
+										"rowObj":[
+										
+										
+													{cols:'4', media: { "url":"images/img4.jpg","type":"image"  } },
+													{cols:'4', media: { "url":"images/img5.jpg","type":"image" } },
+													{cols:'4', media: { "url":"images/img6.jpg","type":"image" } },
 										
 												]
 									}
 								
-							]	
+							]
 				}))
     	},
 		

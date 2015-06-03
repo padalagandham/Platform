@@ -1,0 +1,61 @@
+/* line 1, ../sass/campign-theme.scss */
+.jumbotron {
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 9, ../sass/campign-theme.scss */
+.navbar-inverse {
+  background: url(../images/header-bg.png) repeat-x;
+  border-bottom: dotted 1px #ccc;
+}
+
+/* line 13, ../sass/campign-theme.scss */
+.navbar-brand {
+  height: auto;
+  line-height: 45px;
+}
+
+/* line 17, ../sass/campign-theme.scss */
+.navbar-inverse .navbar-brand {
+  color: #000000;
+}
+
+/* line 21, ../sass/campign-theme.scss */
+.right-toggle .mini-bag {
+  padding: 14px 20px;
+  margin: 0 15px 0 10px;
+  display: inline-block;
+  border-left: dotted 1px #666;
+  border-right: dotted 1px #666;
+}
+
+/* line 28, ../sass/campign-theme.scss */
+.no-gutter {
+  padding: 0;
+}
+
+/* line 31, ../sass/campign-theme.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 34, ../sass/campign-theme.scss */
+footer {
+  background: #124e84;
+  padding: 15px;
+  color: #fff;
+}
+
+/* line 39, ../sass/campign-theme.scss */
+.header-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}

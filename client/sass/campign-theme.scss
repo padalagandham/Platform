@@ -1,0 +1,45 @@
+.jumbotron {
+	background: url(../images/bg.jpg) no-repeat;
+	background-size: cover;
+	background-position: top center;
+	background-attachment: fixed;
+	padding: 0;
+	margin: 0;
+}
+.navbar-inverse {
+	background: url(../images/header-bg.png) repeat-x;
+	border-bottom: dotted 1px #ccc;
+}
+.navbar-brand {
+	height: auto;
+	line-height: 45px;
+} 
+.navbar-inverse .navbar-brand {
+	color: #000000;
+}
+
+.right-toggle .mini-bag {
+	padding: 14px 20px;
+	margin: 0 15px 0 10px;
+	display: inline-block;
+	border-left: dotted 1px #666;
+	border-right: dotted 1px #666;
+}
+.no-gutter {
+	padding: 0;
+}
+img {
+	max-width: 100%;
+}
+footer {
+	background: #124e84;
+	padding: 15px;
+	color: #fff;
+}
+.header-fixed {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
