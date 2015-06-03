@@ -1,0 +1,32 @@
+{
+
+"camPaign": [
+					 { 	
+						"rowObj":[
+									{"cols":9, "media": { "url":"images/img1.jpg","type":"image" } },
+									{"cols":3, "media": { "url":"images/img2.jpg","type":"image"} }
+									
+								 ]
+						
+					},
+					{
+						"rowObj":[
+						
+						
+									{"cols":"12", "media": { "url":"images/img-slider.jpg","type":"image"  } }
+								]
+					},
+				
+					{
+						"rowObj":[
+						
+						
+									{"cols":"4", "media": { "url":"images/img4.jpg","type":"image"  } },
+									{"cols":"4", "media": { "url":"images/img5.jpg","type":"image" } },
+									{"cols":"4", "media": { "url":"images/img6.jpg","type":"image" } }
+						
+								]
+					}
+				
+			]
+}

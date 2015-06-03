@@ -2,10 +2,7 @@ define([ 'backbone' ], function( Backbone ) {
 
   return Backbone.Model.extend({
 
-  	defaults : {
-          media    : null,
-          extra : null
-        }
+  		urlRoot: "js/data/firstObject.json"
 
   });
   

@@ -15,7 +15,7 @@ define([  'zepto', 'backbone', 'views/MainView' ], function( $, Backbone, MainVi
       var mainView = new MainView({
         el : document.getElementById('container')
       });
-      mainView.render();
+     
 
     }
 
