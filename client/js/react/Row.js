@@ -1,7 +1,7 @@
 /**
  * @jsx React.DOM
  */
-define(['react'], function( React ) {
+define(['react','templates/components/ImageModule','templates/components/TextModule'], function( React,ImageModule,TextModule ) {
 
 	 var Row = React.createClass({
 	  render: function () {
@@ -30,36 +30,6 @@ define(['react'], function( React ) {
 	        </div>	      
 	    );
 	  }
-	});
-	
-	var TextModule=React.createClass({
-		render:function(){
-			var txtObj=this.props.txtObj;
-			var classString ="col-md-";
-			classString += txtObj.cols;			
-			return( 
-			<div className={classString} style={{border:"1px solid red"}}>						
-			{txtObj.media.txt}
-			</div>
-			
-			);					
-		}	
-	});
-	
-	
-	var ImageModule=React.createClass({
-		render:function(){		
-			var imgObj=this.props.imgObj;
-			var classString ="col-md-";
-			classString += imgObj.cols;
-			return( 
-				<div className={classString} style={{border:"1px solid red"}}>						
-					<img src={imgObj.media.url} />
-				</div>
-										
-			);
-		}
-	
 	});
 	return Row; 
 });	
