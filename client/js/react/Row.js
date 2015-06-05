@@ -1,35 +1,66 @@
 /**
  * @jsx React.DOM
  */
-define(['react','templates/components/ImageModule','templates/components/TextModule'], function( React,ImageModule,TextModule ) {
+define(['react','templates/components/ImageModule','templates/components/TextModule'], function( React,ImageModule,TextModule) {
 
-	 var Row = React.createClass({
+	var MultipleModule=React.createClass({
+		render:function(){
+			var innerArr=[];
+			var multipleMediaObj=this.props.multipleMediaObj;
+			var classString ="col-md-";
+			classString += multipleMediaObj.cols;	
+			multipleMediaObj.innerRowObj.forEach(function(rows){
+					innerArr.push(<Row cols={rows} />);
+				});
+			return( 
+				<div className={classString}>
+					{innerArr}
+				</div>	
+			);					
+		}	
+	});
+
+
+	 var ColumnSection=React.createClass({
+	 	render:function(){
+	 		var colObj=this.props.columnsObj;
+	 		var column=[];
+	 	colObj.forEach(function(colObj){
+	 	//Check Condition for multiples objects within object
+	 			if(colObj.rowObjStatus){
+					column.push(
+									<MultipleModule multipleMediaObj={colObj} />
+								);						
+				}	
+		//Check condition for media type Image and calling respective Component
+	 		 	if(colObj.rowObjStatus==false && colObj.media.type == "image") {
+					column.push(
+									<ImageModule imgObj={colObj} />										
+							);
+				}
+		//Check condition for media type Text and calling respective Component
+				if(colObj.rowObjStatus==false &&colObj.media.type == "text") {
+					column.push(
+									
+									<TextModule txtObj={colObj}  />
+							 );
+				}
+	 		 });
+	 return(
+	 		<div className="row">      
+	 			{column}
+	 		</div>
+	 	  );
+	 	}   
+	 });
+
+	  var Row = React.createClass({
 	  render: function () {
-	  	var column = [];	  	
-		console.log("cols",this.props.cols);		
-	this.props.cols.rowObj.forEach(function(colObj){
-			console.log("colObj",colObj);
-						if(colObj.media.type == "text") {
-								column.push(
-
-										 <TextModule txtObj={colObj}  />
-									);
-						}
-						if(colObj.media.type == "image") {
-								column.push(
-
-										 <ImageModule imgObj={colObj} />										
-	
-									);
-						}	
-	}); 
-					
-	    return (	      
-	        <div className="row">       	
-				{column}
-	        </div>	      
+		var colObj=this.props.cols.rowObj;	
+	    return (	
+				<ColumnSection columnsObj={colObj} />      
 	    );
 	  }
 	});
-	return Row; 
+return Row; 
 });	
