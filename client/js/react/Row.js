@@ -1,7 +1,7 @@
 /**
  * @jsx React.DOM
  */
-define(['react','templates/components/ImageModule','templates/components/TextModule'], function( React,ImageModule,TextModule) {
+define(['react','templates/components/ImageModule','templates/components/TextModule','templates/components/SliderModule','bootstrap','templates/components/NavBarSection'], function( React,ImageModule,TextModule,SliderModule,bootstrap,NavBarSection) {
 
 	var MultipleModule=React.createClass({
 		render:function(){
@@ -26,25 +26,45 @@ define(['react','templates/components/ImageModule','templates/components/TextMod
 	 		var colObj=this.props.columnsObj;
 	 		var column=[];
 	 	colObj.forEach(function(colObj){
+
+	 		if(colObj.menuObjStatus){
+	 				column.push(
+
+	 					<NavBarSection navObj={colObj} />
+	 				);
+	 			}
+
 	 	//Check Condition for multiples objects within object
 	 			if(colObj.rowObjStatus){
+	 				
 					column.push(
 									<MultipleModule multipleMediaObj={colObj} />
 								);						
-				}	
+				}
+					
 		//Check condition for media type Image and calling respective Component
-	 		 	if(colObj.rowObjStatus==false && colObj.media.type == "image") {
+	 		 	  if (colObj.rowObjStatus==false && colObj.media.type == "image" && !colObj.hasSliderType ) {
 					column.push(
 									<ImageModule imgObj={colObj} />										
 							);
 				}
 		//Check condition for media type Text and calling respective Component
-				if(colObj.rowObjStatus==false &&colObj.media.type == "text") {
+				if(colObj.rowObjStatus==false &&colObj.media.type == "text" && !colObj.hasSliderType) {
 					column.push(
 									
 									<TextModule txtObj={colObj}  />
 							 );
 				}
+				 if( colObj.hasSliderType === true) {
+				 	column.push(
+						
+					
+								 <SliderModule data={colObj}/>						
+							
+								);
+						
+				}
+
 	 		 });
 	 return(
 	 		<div className="row">      
