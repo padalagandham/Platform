@@ -204,6 +204,84 @@
                ]
             }
          ]
+      },
+      {  
+   "rowObj":[  
+      {  
+         "mediaType":"accordian",
+         "accordianObject":[  
+            {  
+               "panelHeadersObject":{  
+                  "linkTo":"#collapseOne",
+                  "media":{  
+                     "type":"text",
+                     "txt":"AccordianOne With Text"
+                  }
+               },
+               "panelContetntObject":{  
+                  "id":"collapseOne",
+                  "media":{  
+                     "type":"text",
+                     "txt":"Accordian One TextBody"
+                  }
+               }
+            },
+            {  
+               "panelHeadersObject":{  
+                  "linkTo":"#collapseTwo",
+                  "media":{  
+                     "type":"text",
+                     "txt":"AccordianTwo with Corousel"
+                  }
+               },
+               "panelContetntObject":{  
+                  "id":"collapseTwo",
+                  "mediaType":"corousel",
+                  "slidersLength":2,
+                  "sliderId":"myCarouselTwo",
+                  "sliderObj":[  
+                     {  
+                        "sliderId":"myCarouselTwo",
+                        "slideTo":0,
+                        "hasActive":"active",
+                        "rowObjStatus":false,
+                        "media":{  
+                           "url":"images/img1.jpg",
+                           "type":"image"
+                        }
+                     },
+                     {  
+                        "sliderId":"myCarouselTwo",
+                        "slideTo":1,
+                        "hasActive":"",
+                        "rowObjStatus":false,
+                        "media":{  
+                           "url":"images/img2.jpg",
+                           "type":"image"
+                        }
+                     }
+                  ]
+               }
+            },
+            {  
+               "panelHeadersObject":{  
+                  "linkTo":"#collapseThree",
+                  "media":{  
+                     "type":"text",
+                     "txt":"AccordianThree"
+                  }
+               },
+               "panelContetntObject":{  
+                  "id":"collapseThree",
+                  "media":{  
+                     "type":"text",
+                     "txt":"Accordian THREE Body"
+                  }
+               }
+            }
+         ]
       }
+   ]
+}
    ]
 }

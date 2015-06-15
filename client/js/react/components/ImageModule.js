@@ -5,7 +5,14 @@ define(['react'], function( React) {
 			var imgObj=this.props.imgObj;
 			var classString ="col-md-";
 			classString += imgObj.cols;
-			var imgString=<div className={classString}><img src={imgObj.media.url} /></div>;
+			var imgString;
+			if(imgObj.cols){
+				 imgString=<div className={classString}><img src={imgObj.media.url} /></div>;
+			}else{
+				imgString=<img src={imgObj.media.url}/>;
+
+			}
+
 			return( 
 					imgString									
 			);

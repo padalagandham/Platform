@@ -1,7 +1,7 @@
 /**
  * @jsx React.DOM
  */
-define(['react','templates/components/ImageModule','templates/components/TextModule','templates/components/SliderModule','bootstrap','templates/components/NavBarSection'], function( React,ImageModule,TextModule,SliderModule,bootstrap,NavBarSection) {
+define(['react','templates/components/ImageModule','templates/components/TextModule','templates/components/SliderModule','bootstrap','templates/components/NavBarSection','templates/components/AccordianModule'], function( React,ImageModule,TextModule,SliderModule,bootstrap,NavBarSection,AccordianModule) {
 
 	var MultipleModule=React.createClass({
 		render:function(){
@@ -31,6 +31,12 @@ define(['react','templates/components/ImageModule','templates/components/TextMod
 	 				column.push(
 
 	 					<NavBarSection navObj={colObj} />
+	 				);
+	 			}
+
+	 			if(colObj.mediaType === "accordian"){
+	 				column.push(
+	 					<AccordianModule accordianObj={colObj} />
 	 				);
 	 			}
 

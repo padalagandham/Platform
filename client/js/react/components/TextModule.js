@@ -4,7 +4,14 @@ define(['react'], function( React) {
 			var txtObj=this.props.txtObj;
 			var classString ="col-md-";
 			classString += txtObj.cols;	
-			var txtString=<div className={classString} style={{border:"1px solid red"}}>{txtObj.media.txt}</div>					
+			var txtString;
+			if(txtObj.cols){
+				txtString=<div className={classString} style={{border:"1px solid red"}}>{txtObj.media.txt}</div>
+			}
+			else{
+				txtString=<div>{txtObj.media.txt}</div>
+			}
+						
 			return( 
 				txtString		
 			);					
