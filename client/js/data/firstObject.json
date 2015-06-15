@@ -130,9 +130,10 @@
             {  
                "hasSliderType":true,
                "slidersLength":6,
+               "sliderId":"myCarousel",
                "sliderObj":[  
                   {  
-                     "cols":"12",
+                   "sliderId":"myCarousel",
                      "slideTo":0,
                      "hasActive":"active",
                      "rowObjStatus":false,
@@ -142,7 +143,7 @@
                      }
                   },
                   {  
-                     "cols":"12",
+                    "sliderId":"myCarousel",
                      "slideTo":1,
                      "hasActive":"",
                      "rowObjStatus":false,
@@ -152,7 +153,7 @@
                      }
                   },
                   {  
-                     "cols":"12",
+                    "sliderId":"myCarousel",
                      "slideTo":2,
                      "hasActive":"",
                      "rowObjStatus":false,
@@ -162,7 +163,7 @@
                      }
                   },
                   {  
-                     "cols":"12",
+                      "sliderId":"myCarousel",
                      "slideTo":3,
                      "hasActive":"",
                      "rowObjStatus":false,
@@ -172,7 +173,7 @@
                      }
                   },
                   {  
-                     "cols":"12",
+                      "sliderId":"myCarousel",
                      "slideTo":4,
                      "hasActive":"",
                      "rowObjStatus":false,
@@ -182,7 +183,7 @@
                      }
                   },
                   {  
-                     "cols":"12",
+                     "sliderId":"myCarousel",
                      "slideTo":5,
                      "hasActive":"",
                      "rowObjStatus":false,
@@ -192,7 +193,7 @@
                      }
                   },
                   {  
-                     "cols":"12",
+                      "sliderId":"myCarousel",
                      "slideTo":6,
                      "hasActive":"",
                      "rowObjStatus":false,

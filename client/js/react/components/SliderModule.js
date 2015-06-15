@@ -7,8 +7,9 @@ define(['react','templates/components/ImageModule','templates/components/TextMod
 					var a=[],b=[];
 
  this.props.data.sliderObj.forEach(function(sliderObj){
+ 		var dataTargetAttr="#"+sliderObj.sliderId;
 		a.push(
-				<li data-target="#myCarousel" data-slide-to={sliderObj.slideTo} className={sliderObj.hasActive}></li>
+				<li data-target={dataTargetAttr} data-slide-to={sliderObj.slideTo} className={sliderObj.hasActive}></li>
 				);
 		});
 
@@ -33,7 +34,7 @@ define(['react','templates/components/ImageModule','templates/components/TextMod
    });
 			return( 
 
-					<div id="myCarousel" className="carousel slide col-md-12" data-ride="carousel">
+					<div id={this.props.data.sliderId} className="carousel slide col-md-12" data-ride="carousel">
 						<ol className="carousel-indicators">
 							{a}
 						</ol>
