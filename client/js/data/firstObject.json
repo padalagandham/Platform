@@ -129,12 +129,11 @@
          "rowObj":[  
             {  
                "hasSliderType":true,
-               "slidersLength":6,
+               "slidersLength":7,
                "sliderId":"myCarousel",
                "sliderObj":[  
                   {  
                    "sliderId":"myCarousel",
-                     "slideTo":0,
                      "hasActive":"active",
                      "rowObjStatus":false,
                      "media":{  
@@ -144,7 +143,6 @@
                   },
                   {  
                     "sliderId":"myCarousel",
-                     "slideTo":1,
                      "hasActive":"",
                      "rowObjStatus":false,
                      "media":{  
@@ -154,7 +152,6 @@
                   },
                   {  
                     "sliderId":"myCarousel",
-                     "slideTo":2,
                      "hasActive":"",
                      "rowObjStatus":false,
                      "media":{  
@@ -164,7 +161,6 @@
                   },
                   {  
                       "sliderId":"myCarousel",
-                     "slideTo":3,
                      "hasActive":"",
                      "rowObjStatus":false,
                      "media":{  
@@ -174,7 +170,6 @@
                   },
                   {  
                       "sliderId":"myCarousel",
-                     "slideTo":4,
                      "hasActive":"",
                      "rowObjStatus":false,
                      "media":{  
@@ -184,7 +179,6 @@
                   },
                   {  
                      "sliderId":"myCarousel",
-                     "slideTo":5,
                      "hasActive":"",
                      "rowObjStatus":false,
                      "media":{  
@@ -194,7 +188,6 @@
                   },
                   {  
                       "sliderId":"myCarousel",
-                     "slideTo":6,
                      "hasActive":"",
                      "rowObjStatus":false,
                      "media":{  
@@ -243,7 +236,6 @@
                   "sliderObj":[  
                      {  
                         "sliderId":"myCarouselTwo",
-                        "slideTo":0,
                         "hasActive":"active",
                         "rowObjStatus":false,
                         "media":{  
@@ -253,7 +245,6 @@
                      },
                      {  
                         "sliderId":"myCarouselTwo",
-                        "slideTo":1,
                         "hasActive":"",
                         "rowObjStatus":false,
                         "media":{  
