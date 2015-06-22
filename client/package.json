@@ -1,0 +1,36 @@
+{
+  "name": "platform-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Interactive Marketing Platform’s goal is to develop a services platform used by marketers to design multichannel marketing campaigns and track the effect of those campaigns over time, by customer segment and channels. To help our clients uniquely position to manage the mobile experiences of their customers, increase revenues through higher conversion rates, and ultimately deliver a delightful and engaging shopping experience.",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "cookie-parser": "^1.3.5",
+    "ejs": "^2.3.1",
+    "express": "^4.13.0",
+    "jsonwebtoken": "^5.0.2",
+    "lodash": "^3.9.3",
+    "log4js": "^0.6.26",
+    "morgan": "^1.6.0",
+    "node-rest-client": "^1.5.1",
+    "react-tools": "^0.13.3",
+    "underscore": "^1.8.3",
+    "validator": "^3.40.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rpadala-nisum-com/Platform"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpadala-nisum-com/Platform/issues"
+  },
+  "homepage": "https://github.com/rpadala-nisum-com/Platform"
+}

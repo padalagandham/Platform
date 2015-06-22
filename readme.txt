@@ -1,13 +1,10 @@
 Instructions
 
-1. npm install 
+1. Platform/client : npm install 
 	 Install all dependencies.
 
-2.npm install -g react-tools      
-	Install react tools for jsx commands.
-
-3. jsx --watch client/js/react/   client/js/templates/
+2. jsx -w client/public/js/react/ client/public/js/templates/
 	 Command which compiles react script(JSX) to javascript.
 
-4. node server/server.js
+3. node app.js 
 	  To run server
